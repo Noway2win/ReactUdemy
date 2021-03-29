@@ -1,11 +1,18 @@
 import React from 'react';
 
-const Header = () => {
+import styled from 'styled-components';
+
+const HeaderDiv = styled.div`
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+`;
+const Header = ({liked, totalPosts}) => {
 	return (
-		<div className="app-header d-flex">
+		<HeaderDiv>
 			<h1>Satsukevich Dzmirty</h1>
-			<h2>4 posts and 0 likes</h2>
-		</div>
+			<h2>{totalPosts} posts and {liked} likes</h2>
+		</HeaderDiv>
 	);
 };
 

@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-.app-header {
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
 .app-header h1 {
   /* width: 150px;
   height: 150px; */
@@ -26,10 +21,6 @@ code {
 .app-header h2 {
   font-size: 1.2rem;
   color: grey;
-}
-.app {
-  margin: 0 auto;
-  max-width: 800px;
 }
 .bottom-panel {
   margin-top: 20px;
@@ -100,9 +91,6 @@ code {
 .app-list .list-group-item {
   padding: 20px 35px 10px 35px;
   margin-top: 10px;
-}
-.search-panel {
-  margin: 1rem 0;
 }
 
 .search-panel .search-input {

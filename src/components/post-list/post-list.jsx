@@ -1,14 +1,20 @@
 import React from 'react';
 import PostListItem from '../post-list-item/item';
-const PostList = ({
-	posts
-}) => {
+
+
+const PostList = ({posts, onDelete, onToogleImportant, onToogleLiked}) => {
+
 	const elements = posts.map((item) => {
 		if(typeof item ==='object' && isEmpty(item)){
 			const {id, ...itemProps} = item;
 			return (
-				<li ket={id} className='list-group-item'>
-					<PostListItem {...itemProps} />
+				<li key={id} className='list-group-item'>
+					<PostListItem 
+						{...itemProps} 
+						onDelete={()=>onDelete(id)}
+						onToogleImportant={()=>onToogleImportant(id)}
+						onToogleLiked={()=>onToogleLiked(id)}
+					/>
 				</li>
 			);
 		}	
